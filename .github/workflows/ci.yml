@@ -1,0 +1,37 @@
+name: ReadMeeting.ai CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-frontend:
+    name: Build & Test Frontend (Next.js / TypeScript)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Lint and Typecheck
+        run: npm run build
+
+  build-backend:
+    name: Build & Test Backend (.NET 8 Clean Architecture)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore backend/ReadMeeting.sln
+      - name: Build Solution
+        run: dotnet build backend/ReadMeeting.sln --no-restore --configuration Release

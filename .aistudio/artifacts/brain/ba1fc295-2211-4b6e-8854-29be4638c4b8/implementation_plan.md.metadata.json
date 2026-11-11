@@ -1,0 +1,6 @@
+{
+  "summary": "Plan d'initialisation et cadrage d'architecture technique pour ReadMeeting.ai (DGF Côte d'Ivoire). Définition de la structure monorepo, des mécanismes réels d'authentification Microsoft Entra ID et Microsoft Graph, de la matrice de permissions et des prérequis Azure/M365.",
+  "updatedAt": "2026-11-05T13:59:45.901491451Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

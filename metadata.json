@@ -1,0 +1,8 @@
+{
+  "name": "ReadMeeting.ai - DGF",
+  "description": "Assistant institutionnel intelligent de gestion et d'exploitation des réunions Microsoft Teams et Outlook pour la Direction Générale des Financements (DGF).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

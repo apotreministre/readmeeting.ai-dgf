@@ -1,0 +1,47 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "tsc --noEmit",
+    "test:uri": "tsx scripts/test-redirect-validation.ts",
+    "test:graph": "tsx scripts/test-graph-integration.ts",
+    "test:transcript": "tsx scripts/test-transcript-service.ts",
+    "test:notification": "tsx scripts/test-admin-notification.ts",
+    "test:consent": "tsx scripts/test-admin-consent-workflow.ts",
+    "test:real-transcript": "tsx scripts/test-real-teams-transcript.ts",
+    "test:attendee": "tsx scripts/test-attendee-transcripts.ts"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^5.28.0",
+    "@azure/msal-react": "^5.8.0",
+    "@google/genai": "^2.4.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/microsoft-graph": "^2.40.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "@types/express": "^4.17.21"
+  }
+}
